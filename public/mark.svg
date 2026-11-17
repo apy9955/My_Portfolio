@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs><linearGradient id="solar" x1="0%" y1="100%" x2="100%" y2="0%"><stop stop-color="#00e4ef"/><stop offset="1" stop-color="#f0b429"/></linearGradient></defs>
+  <rect width="40" height="40" rx="10" fill="url(#solar)"/>
+  <path d="m9 27 5-14 5 14m-8.5-4.5h7M23 13v14m0-6 7-8m-6 7 7 7" fill="none" stroke="#010409" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,45 @@
+{
+  "leetcode": {
+    "username": "apy9955",
+    "profileUrl": "https://leetcode.com/u/apy9955/",
+    "ranking": 3429344,
+    "totalSolved": 36,
+    "easySolved": 12,
+    "mediumSolved": 21,
+    "hardSolved": 3,
+    "reputation": 0
+  },
+  "hackerrank": {
+    "username": "1823ary",
+    "name": "Aman Kumar",
+    "email": "1823ary@gmail.com",
+    "country": "India",
+    "profileUrl": "https://www.hackerrank.com/profile/1823ary",
+    "level": 5,
+    "badges": [
+      {
+        "name": "C++",
+        "stars": 3,
+        "solved": 9,
+        "points": 100,
+        "category": "Language Proficiency",
+        "rank": 410016
+      },
+      {
+        "name": "SQL",
+        "stars": 1,
+        "solved": 11,
+        "points": 135,
+        "category": "Specialized Skills",
+        "rank": 1771048
+      },
+      {
+        "name": "Python",
+        "stars": 1,
+        "solved": 1,
+        "points": 35,
+        "category": "Language Proficiency"
+      }
+    ]
+  }
+}
