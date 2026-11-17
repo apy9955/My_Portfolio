@@ -6,6 +6,7 @@ import { closeDatabase } from './db'
 
 export const apiApp = express()
 const PORT = Number(process.env.PORT) || 3001
+const HOST = process.env.HOST || '0.0.0.0'
 const distDir = join(process.cwd(), 'dist')
 
 // Mount API router
@@ -13,18 +14,21 @@ apiApp.use('/api', apiRouter)
 
 // In production, serve static files from dist if present
 if (existsSync(distDir)) {
-  apiApp.use(express.static(distDir))
+  appStaticMiddleware(apiApp, distDir)
+}
 
+function appStaticMiddleware(app: express.Express, dir: string) {
+  app.use(express.static(dir))
   // Fallback to index.html for SPA routing
-  apiApp.use((_req, res) => {
-    res.sendFile(join(distDir, 'index.html'))
+  app.use((_req, res) => {
+    res.sendFile(join(dir, 'index.html'))
   })
 }
 
-export function startServer(port = PORT) {
-  const server = apiApp.listen(port, () => {
-    console.log(`🚀 Portfolio Backend Server running on http://localhost:${port}`)
-    console.log(`📡 API Endpoints available at http://localhost:${port}/api/health`)
+export function startServer(port = PORT, host = HOST) {
+  const server = apiApp.listen(port, host, () => {
+    console.log(`🚀 Portfolio Backend Server running on http://${host}:${port}`)
+    console.log(`📡 API Endpoints available at http://${host}:${port}/api/health`)
   })
 
   // Graceful shutdown handling

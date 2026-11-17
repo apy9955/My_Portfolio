@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: aman-portfolio-backend
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm run server
+    autoDeploy: true
+    disk:
+      name: portfolio-db-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATA_DIR
+        value: /var/data
+      - key: ADMIN_USERNAME
+        value: aman
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_SECRET
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: https://aman-portfolio.vercel.app,http://localhost:5173
+      - key: NOTIFICATION_EMAIL
+        value: 1823ary@gmail.com

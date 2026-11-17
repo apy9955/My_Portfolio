@@ -3,13 +3,13 @@ import { join } from 'node:path'
 import { mkdirSync, existsSync } from 'node:fs'
 import { createHash } from 'node:crypto'
 
-const dataDir = join(process.cwd(), 'data')
+const dataDir = process.env.DATA_DIR || join(process.cwd(), 'data')
 mkdirSync(dataDir, { recursive: true })
 
-const backupDir = join(dataDir, 'backups')
+const backupDir = process.env.BACKUP_DIR || join(dataDir, 'backups')
 mkdirSync(backupDir, { recursive: true })
 
-const dbPath = join(dataDir, 'portfolio.db')
+const dbPath = process.env.DATABASE_PATH || join(dataDir, 'portfolio.db')
 export const db = new DatabaseSync(dbPath)
 
 // Initialize schema with WAL journal mode
