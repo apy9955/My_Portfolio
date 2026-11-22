@@ -1,25 +1,49 @@
-# Dependencies and build caches
-node_modules
-dist
-.npm
+# Version control
+.git/
+.gitignore
 
-# SQLite database and backups (use persistent volume mounts instead)
-data
+# Dependencies
+node_modules/
+**/node_modules/
+.npm/
+
+# Build & compiled output
+dist/
+**/dist/
+build/
+**/build/
+out/
+.vite/
+.vite-temp/
+.cache/
+
+# Logs & Debugging
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# SQLite Database, Caches & Backups
+data/
+**/data/
 *.db
 *.db-shm
 *.db-wal
 *.sqlite
 
-# Version control and environment secrets
-.git
-.gitignore
+# OS and Editor Artifacts
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Environment & Deployment configs
 .env
 .env.local
 .env.*.local
-*.log
-.DS_Store
-
-# Deployment configs not needed in image
 .vercelignore
 vercel.json
 render.yaml
+README.md
