@@ -833,9 +833,8 @@ export default function KnowledgeGalaxy() {
           return (
             <div
               key={label.id}
-              className={`celestial-star-label ${isSelected ? 'is-selected' : ''} ${
-                isHovered ? 'is-hovered' : ''
-              } tier-${label.tier}`}
+              className={`celestial-star-label ${isSelected ? 'is-selected' : ''} ${isHovered ? 'is-hovered' : ''
+                } tier-${label.tier}`}
               style={{
                 transform: `translate3d(${label.x}px, ${label.y + (isSelected ? 18 : 12)}px, 0) translate(-50%, 0)`,
               }}
