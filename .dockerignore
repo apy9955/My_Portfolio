@@ -1,48 +1,81 @@
 # Version control
+.git
 .git/
+**/.git
+**/.git/
 .gitignore
+**/.gitignore
 
 # Dependencies
+node_modules
 node_modules/
+**/node_modules
 **/node_modules/
+.npm
 .npm/
+**/.npm/
 
 # Build & compiled output
+dist
 dist/
+**/dist
 **/dist/
+build
 build/
+**/build
 **/build/
+out
 out/
+**/out/
+.vite
 .vite/
+**/.vite/
+.vite-temp
 .vite-temp/
+**/.vite-temp/
+.cache
 .cache/
+**/.cache/
 
 # Logs & Debugging
+logs
 logs/
+**/logs
+**/logs/
 *.log
+**/*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
 # SQLite Database, Caches & Backups
+data
 data/
+**/data
 **/data/
 *.db
 *.db-shm
 *.db-wal
 *.sqlite
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/*.sqlite
 
 # OS and Editor Artifacts
 .DS_Store
+**/.DS_Store
 Thumbs.db
+**/Thumbs.db
 .idea/
+**/.idea/
 .vscode/
+**/.vscode/
 
 # Environment & Deployment configs
-.env
-.env.local
-.env.*.local
+.env*
+**/.env*
 .vercelignore
 vercel.json
 render.yaml
