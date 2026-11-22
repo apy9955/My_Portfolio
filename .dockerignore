@@ -1,0 +1,25 @@
+# Dependencies and build caches
+node_modules
+dist
+.npm
+
+# SQLite database and backups (use persistent volume mounts instead)
+data
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+
+# Version control and environment secrets
+.git
+.gitignore
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+
+# Deployment configs not needed in image
+.vercelignore
+vercel.json
+render.yaml
